@@ -25,3 +25,19 @@ class Player {
 
     }
 }
+
+class Game {
+    constructor(whitePlayer, blackPlayer, board) {
+        this.whitePlayer = whitePlayer;
+        this.blackPlayer = blackPlayer;
+        this.board = board;
+    }
+
+    start() {
+
+    }
+
+    isGameOver() {
+
+    }
+}
