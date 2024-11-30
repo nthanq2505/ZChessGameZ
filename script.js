@@ -1,43 +1,31 @@
-class Position {
-    constructor(row, col) {
-        this.row = row;
-        this.col = col;
-    }
+function PieceBase(position, color) {
+    this.position = position;
+    this.color = color;
 }
 
-class Piece {
-    constructor(position, color) {
-        this.position = position;
-        this.color = color;
-    }
-    isValidMove(newPosition, board) {
-
-    }
+PieceBase.prototype.isValidMove = function() {
+    console.log('Can not implement isValidMove in PieceBase');
 }
 
-class Player {
-    constructor(name, color) {
-        this.name = name;
-        this.color = color;
-    }
-
-    makeMove() {
-
-    }
+function PlayerBase(name, color) {
+    this.name = name;
+    this.color = color;
 }
 
-class Game {
-    constructor(whitePlayer, blackPlayer, board) {
-        this.whitePlayer = whitePlayer;
-        this.blackPlayer = blackPlayer;
-        this.board = board;
-    }
+PlayerBase.prototype.makeMove = function() {
+    console.log('Can not implement makeMove in PlayerBase');
+}
 
-    start() {
+function GameBase(board, blackPlayer, whitePlayer) {
+    this.board = board;
+    this.blackPlayer = blackPlayer;
+    this.whitePlayer = whitePlayer;
+}
 
-    }
+GameBase.prototype.start = function() {
+    console.log('Can not implement start in GameBase');
+}
 
-    isGameOver() {
-
-    }
+GameBase.prototype.end = function() {
+    console.log('Can not implement end in GameBase');
 }
